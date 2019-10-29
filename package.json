@@ -1,0 +1,32 @@
+{
+  "name": "current-takehome",
+  "version": "1.0.0",
+  "description": "Current Takehome",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "start": "nodemon server/server.js"
+  },
+  "jest": {
+    "globalSetup": "./jest-setup.js",
+    "globalTeardown": "./jest-teardown.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MShinControl/current-takehome.git"
+  },
+  "author": "Mark Shin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MShinControl/current-takehome/issues"
+  },
+  "homepage": "https://github.com/MShinControl/current-takehome#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "pg": "^7.12.1",
+    "supertest": "^4.0.2"
+  }
+}
