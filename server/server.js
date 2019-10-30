@@ -6,9 +6,17 @@ const userController = require('./controllers/userController');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.send('still doesnt work')
+app.post('/visit', userController.postLocation, (req, res) => {
+    const { visitId } = res.locals;
+    if(!visitId) res.status(400).send('Could not retrieve correct data');
+    res.status(200).json({ "visitId": visitId });
+});
+
+app.get('/visit', userController.getLocation, (req, res) => {
+    const { user } = res.locals;
+    if(!user) res.status(400).send('Could not retrieve correct data');
+    res.status(200).json([{ "userId": user.userid, "name": user.name, "visitId": user.id }]);
 });
 
 
-app.listen(() => console.log(`Listening on port: ${PORT}`));
+module.exports = app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
