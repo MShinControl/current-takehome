@@ -1,0 +1,25 @@
+{
+  "name": "current-takehome",
+  "version": "1.0.0",
+  "description": "Current Takehome",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MShinControl/current-takehome.git"
+  },
+  "author": "Mark Shin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MShinControl/current-takehome/issues"
+  },
+  "homepage": "https://github.com/MShinControl/current-takehome#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "pg": "^7.12.1"
+  }
+}
